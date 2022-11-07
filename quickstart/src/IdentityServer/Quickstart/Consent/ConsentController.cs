@@ -33,7 +33,6 @@ namespace IdentityServerHost.Quickstart.UI
             IEventService events,
             ILogger<ConsentController> logger)
         {
-            throw new Exception();
             _interaction = interaction;
             _events = events;
             _logger = logger;

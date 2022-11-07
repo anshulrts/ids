@@ -28,11 +28,7 @@ namespace IdentityServer
             // uncomment, if you want to add an MVC-based UI
             services.AddControllersWithViews();
 
-            var builder = services.AddIdentityServer(options =>
-                {
-                    options.EmitStaticAudienceClaim = true;
-                    
-                })
+            var builder = services.AddIdentityServer()
                 .AddInMemoryClients(Config.Clients)
                 .AddInMemoryIdentityResources(Config.IdResources)
                 .AddInMemoryApiResources(Config.ApiResources)
