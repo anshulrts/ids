@@ -34,9 +34,6 @@ namespace IdentityServer
                 .AddInMemoryApiResources(Config.ApiResources)
                 .AddInMemoryApiScopes(Config.ApiScope)
                 .AddTestUsers(TestUsers.Users);
-
-            // not recommended for production - you need to store your key material somewhere secure
-            builder.AddDeveloperSigningCredential();
         }
 
         public void Configure(IApplicationBuilder app)
